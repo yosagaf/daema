@@ -1,35 +1,165 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daema - Site en construction</title>
+    <title>DAEMA - Pioneering Computer Vision</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        /* Base styles */
+        body, html {
             margin: 0;
-            background-color: #f0f0f0;
-        }
-        .container {
-            text-align: center;
-            padding: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
+            padding: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
             color: #333;
+            scroll-behavior: smooth;
+        }
+        
+        /* Header */
+        header {
+            background-color: #f8f8f8;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+            text-decoration: none;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 2rem;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        /* Main content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 1rem 2rem;
+        }
+        section {
+            margin-bottom: 4rem;
+        }
+        h1, h2 {
+            margin-bottom: 1rem;
+        }
+        
+        /* Services */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .service {
+            background-color: #f8f8f8;
+            padding: 1.5rem;
+            border-radius: 5px;
+        }
+        
+        /* Contact form */
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+        button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Daema</h1>
-        <p>Site web en construction. Revenez bientôt !</p>
-    </div>
+    <header>
+        <nav>
+            <a href="#" class="logo">DAEMA</a>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Pioneering Computer Vision for Embedded Systems</h1>
+            <p>DAEMA specializes in developing state-of-the-art computer vision algorithms and advanced image processing solutions.</p>
+        </section>
+
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="services">
+                <div class="service">
+                    <h3>CTO as a Service</h3>
+                    <p>Strategic technological guidance to drive innovation and growth for your company.</p>
+                </div>
+                <div class="service">
+                    <h3>AI Development</h3>
+                    <p>Customized AI solutions to enhance operational efficiency and decision-making.</p>
+                </div>
+                <div class="service">
+                    <h3>Training</h3>
+                    <p>Specialized training to empower your team with the latest skills in AI and software.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Based in Paris, DAEMA is committed to driving innovation and excellence in the field of computer vision and AI. Our mission is to deliver cutting-edge, optimized vision solutions for diverse applications to our customers.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 DAEMA. All rights reserved.</p>
+    </footer>
 </body>
 </html>
