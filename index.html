@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="assets/img/logo.ico" type="image/x-icon">
     <title>DAEMA - Pioneering Computer Vision</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Base styles */
         body, html {
@@ -13,11 +15,13 @@
             line-height: 1.6;
             color: #333;
             scroll-behavior: smooth;
+            height: 100%;
         }
         
         /* Header */
         header {
-            background-color: #f8f8f8;
+            background-color: #333;
+            color: #fff;
             padding: 1rem;
             position: fixed;
             width: 100%;
@@ -34,7 +38,7 @@
         .logo {
             font-size: 1.5rem;
             font-weight: bold;
-            color: #333;
+            color: #fff;
             text-decoration: none;
         }
         nav ul {
@@ -46,69 +50,94 @@
         }
         nav ul li a {
             text-decoration: none;
-            color: #333;
+            color: #fff;
             font-weight: bold;
         }
         
         /* Main content */
         main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 1rem 2rem;
+            padding-top: 4rem;
         }
         section {
-            margin-bottom: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+            padding: 2rem;
+            color: #fff;
+        }
+        section#home {
+            background-color: #f8f8f8;
+			color: #333;
+        }
+        section#services {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        section#about {
+            background-color: #f8f8f8;
+			color: #333;
+        }
+        section#contact {
+            background-color: #333;
         }
         h1, h2 {
             margin-bottom: 1rem;
         }
         
         /* Services */
+        .services-intro {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
         .services {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         .service {
-            background-color: #f8f8f8;
+            background-color: #fff;
             padding: 1.5rem;
             border-radius: 5px;
         }
+        .service h3 {
+            color: #0056b3;
+            margin-bottom: 0.5rem;
+        }
         
-        /* Contact form */
-        form {
+        /* Contact */
+        .contact-info {
             display: grid;
             gap: 1rem;
         }
-        input, textarea {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 3px;
+        .contact-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        button {
-            background-color: #333;
+        .contact-item i {
+            font-size: 1.5rem;
+            margin-right: 1rem;
             color: #fff;
-            border: none;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            border-radius: 3px;
         }
         
         /* Footer */
         footer {
-            background-color: #333;
+            background-color: #000;
             color: #fff;
             text-align: center;
             padding: 1rem;
-            margin-top: 2rem;
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="#" class="logo">DAEMA</a>
+            <a href="#home" class="logo">DAEMA</a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
@@ -120,41 +149,59 @@
 
     <main>
         <section id="home">
-            <h1>Pioneering Computer Vision for Embedded Systems</h1>
-            <p>DAEMA specializes in developing state-of-the-art computer vision algorithms and advanced image processing solutions.</p>
+            <div>
+                <h1>Pioneering Computer Vision for Embedded Systems</h1>
+                <p>DAEMA specializes in developing state-of-the-art computer vision algorithms and advanced image processing solutions.</p>
+            </div>
         </section>
 
         <section id="services">
-            <h2>Our Services</h2>
-            <div class="services">
-                <div class="service">
-                    <h3>CTO as a Service</h3>
-                    <p>Strategic technological guidance to drive innovation and growth for your company.</p>
-                </div>
-                <div class="service">
-                    <h3>AI Development</h3>
-                    <p>Customized AI solutions to enhance operational efficiency and decision-making.</p>
-                </div>
-                <div class="service">
-                    <h3>Training</h3>
-                    <p>Specialized training to empower your team with the latest skills in AI and software.</p>
+            <div>
+                <h2>Our Services</h2>
+                <p class="services-intro">DAEMA, leader in software engineering and AI, transforms your technological challenges into competitive advantages.</p>
+                <div class="services">
+                    <div class="service">
+                        <h3>CTO as a Service</h3>
+                        <p>We provide strategic technological guidance to drive innovation and growth for your company, turning your vision into a competitive edge.</p>
+                    </div>
+                    <div class="service">
+                        <h3>AI Development</h3>
+                        <p>Our customized AI solutions enhance operational efficiency and decision-making, transforming complex data challenges into powerful business insights.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Training</h3>
+                        <p>We offer specialized training to empower your team with the latest skills in AI and software, turning technological complexities into opportunities for growth and innovation.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="about">
-            <h2>About Us</h2>
-            <p>Based in Paris, DAEMA is committed to driving innovation and excellence in the field of computer vision and AI. Our mission is to deliver cutting-edge, optimized vision solutions for diverse applications to our customers.</p>
+            <div>
+                <h2>About Us</h2>
+                <p>Based in Paris, DAEMA is committed to driving innovation and excellence in the field of computer vision and AI. </p>
+				<p>Our mission is to deliver cutting-edge, optimized vision solutions for diverse applications to our customers.</p>
+			</div>
         </section>
 
         <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <input type="text" placeholder="Name" required>
-                <input type="email" placeholder="Email" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
+            <div>
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        <p>58 Rue de Monceau, 75008 Paris France</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <p>contact@daema.fr</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        <p>+33 7 83 92 91 27</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
